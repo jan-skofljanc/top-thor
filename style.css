@@ -52,14 +52,14 @@ body {
 /* section-header part hero */
 
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 300px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     gap: 32px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 
 div.hero-left > h1 {
     color: #F9FAF8;
@@ -86,10 +86,14 @@ div.hero-left > button {
     margin-bottom: 12px;
 }
 
+
+/*
 div.hero-right > img {
     width: 600px;
     height: 200px;
 }
+*/
+
 
 /* section-info */
 
@@ -111,6 +115,8 @@ div.info > h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
     gap: 25px;
 }
 
@@ -118,13 +124,15 @@ div.info > h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-basis: 150px;
+    border: solid red 1px;
 }
 
 .card img {
     border: solid #3882F6 3px;
     border-radius: 8px;
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    min-height: 150px;
 }
 
 .card p {
